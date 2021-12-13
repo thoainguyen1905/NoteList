@@ -1,0 +1,45 @@
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username":"thoai",
+    "password":"thoai1"
+}
+
+###
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username":"thoai",
+    "password":"thoai11"
+}
+###
+POST http://localhost:5000/posts
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFjZWQ0YmI4ZjBjOGMxNWNkNjRlZmUiLCJpYXQiOjE2Mzg3Nzc0OTR9.W7Z8fyWOPyqD3_-6QMd1Y3E15zSlwQrm-DiyoXzGjzU
+
+{
+    "title":"react",
+    "description":"reactvn",
+    "url":"facebook.com",
+    "status":"TO LEARN"
+}
+###
+GET http://localhost:5000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFjZWQ0YmI4ZjBjOGMxNWNkNjRlZmUiLCJpYXQiOjE2Mzg3Nzc0OTR9.W7Z8fyWOPyqD3_-6QMd1Y3E15zSlwQrm-DiyoXzGjzU
+###
+
+PUT http://localhost:5000/posts/61adc9f9b4d99bc5bb23b223
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWFjZWQ0YmI4ZjBjOGMxNWNkNjRlZmUiLCJpYXQiOjE2Mzg3Nzc0OTR9.W7Z8fyWOPyqD3_-6QMd1Y3E15zSlwQrm-DiyoXzGjzU
+
+{
+    "title":"reactvn",
+    "description":"testtt",
+    "url":"test.com",
+    "status":"TO LEARN"
+}
+###
+DELETE http://localhost:5000/posts/61a4443929b04314a64317d1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE0M2ZhY2I5ODgzZTBjNDY5MGVlOGEiLCJpYXQiOjE2MzgxNTQ2NDV9.IX-1LxrVrDllBISCLEhnWAEDzgJxAlx91CXlPp-z9gU
